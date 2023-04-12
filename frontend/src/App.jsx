@@ -51,7 +51,7 @@ function App() {
     return (
         <div className='flex justify-center py-16 '>
             <div className='p-4 w-9/12'>
-                <h2 className='tracking-wider text-3xl text-center font-bold '>TO DO 🏀</ะh2>
+                <h2 className='tracking-wider text-3xl text-center font-bold '>TO DO 🏀</h2>
                 <form className='flex gap-3 text-xl' onSubmit={handleButton}>
                     <input type="text" value={title} className='border-b-2 border-cc1 w-full px-2 focus:outline-none bg-transparent  font-semibold' onChange={(e)=>{setTitle(e.target.value)}}/>
                     <button className='px-4 py-1 bg-cc1 text-cc4 font-semibold rounded-xl'>{isUpdating ? "UPDATE" : "ADD"}</button>
