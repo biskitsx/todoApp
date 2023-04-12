@@ -36,7 +36,7 @@ function deleteData(e,id,setTasks) {
 
 }
 
-function updateData(e,id,title,setTitle,setTasks,tasks) {
+function updateData(e,id,title,setTitle,setTasks,tasks,setIsUpdating) {
     e.preventDefault();
     Axios.patch(`http://localhost:3000/tasks`,{id : id , title : title})
         .then(setTasks(()=>{
@@ -50,6 +50,7 @@ function updateData(e,id,title,setTitle,setTasks,tasks) {
             )
         }))
     setTitle('');
+    setIsUpdating(false);
 }
 
 
